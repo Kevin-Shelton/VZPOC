@@ -56,8 +56,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-800 pt-6">
           <div className="flex-shrink-0 mb-4 md:mb-0">
             <div className="text-red-600 font-bold">
-              <span className="text-2xl">verizon</span>
-              <span className="block text-sm -mt-1">business</span>
+              <span className="text-2xl">Arkansas</span>
+              <span className="block text-sm -mt-1">POC</span>
             </div>
           </div>
           
