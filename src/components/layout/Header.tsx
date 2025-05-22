@@ -46,7 +46,7 @@ const Header = () => {
       {/* Main header */}
       <div className="border-b border-gray-200">
         <div className="container mx-auto flex items-center justify-between px-4 py-4">
-          <Link href="/" title="Verizon Business" className="flex-shrink-0">
+          <Link href="/" title="Arkansas POC" className="flex-shrink-0">
             <div className="relative h-9 w-36">
               <div className="text-red-600 font-bold">
                 <span className="text-2xl">verizon</span>

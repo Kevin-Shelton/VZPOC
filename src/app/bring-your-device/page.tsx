@@ -19,7 +19,7 @@ export default function BringYourDevice() {
                 Bring your own device
               </h1>
               <p className="text-lg mb-6">
-                Keep your current devices and save with Verizon Business plans. It's easy to switch and bring your own phones.
+                Keep your current devices and save with Arkansas POC Business plans. It's easy to switch and bring your own phones.
               </p>
               <Link 
                 href="/plans"
@@ -49,7 +49,7 @@ export default function BringYourDevice() {
             {[
               {
                 title: "Check compatibility",
-                description: "Verify your device is compatible with the Verizon network",
+                description: "Verify your device is compatible with the Arkansas POC network",
                 icon: "📱",
                 step: 1
               },

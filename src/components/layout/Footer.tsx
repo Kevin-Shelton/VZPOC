@@ -80,7 +80,7 @@ const Footer = () => {
           </div>
           
           <div className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} Verizon. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Arkansas POC. All Rights Reserved.
           </div>
         </div>
       </div>
