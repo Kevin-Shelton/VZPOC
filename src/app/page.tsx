@@ -86,17 +86,17 @@ const BusinessSegments = () => {
   const segments = [
     {
       title: "Small Business",
-      image: "/images/hero-image1.jpg/id/1/400/300",
+      image: "/images/hero-image1.jpg",
       link: "/small-business"
     },
     {
       title: "Enterprise",
-      image: "/images/hero-image2.jpg/id/2/400/300",
+      image: "/images/hero-image2.jpg",
       link: "/enterprise"
     },
     {
       title: "Public Sector",
-      image: "/images/hero-image3.jpg/id/3/400/300",
+      image: "/images/hero-image3.jpg",
       link: "/public-sector"
     }
   ]
