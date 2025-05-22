@@ -49,8 +49,8 @@ const Header = () => {
           <Link href="/" title="Arkansas POC" className="flex-shrink-0">
             <div className="relative h-9 w-36">
               <div className="text-red-600 font-bold">
-                <span className="text-2xl">verizon</span>
-                <span className="block text-sm -mt-1">business</span>
+                <span className="text-2xl">Arkansas</span>
+                <span className="block text-sm -mt-1">POC</span>
               </div>
             </div>
           </Link>
@@ -85,7 +85,7 @@ const Header = () => {
           </div>
           <div className="ml-auto flex items-center space-x-4">
             <Link href="/contact" className="flex items-center text-sm font-semibold">
-              <span className="mr-2">Call Sales:</span> 888-789-1223
+              <span className="mr-2">Call Sales:</span> 111-221-1111
             </Link>
             <Link href="/contact-sales" className="bg-black text-white px-4 py-2 rounded-md text-sm font-semibold">
               Contact sales
