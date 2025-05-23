@@ -152,7 +152,7 @@ export default function SmallBusiness() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                quote: "Arkansas POC's small business solutions helped us stay connected with our customers and team members, even when working remotely.",
+                quote: "Verizon's small business solutions helped us stay connected with our customers and team members, even when working remotely.",
                 author: "Sarah J.",
                 business: "Retail Shop Owner"
               },
@@ -162,7 +162,7 @@ export default function SmallBusiness() {
                 business: "Financial Consultant"
               },
               {
-                quote: "Switching to Arkansas POC's Business Internet improved our productivity with faster, more reliable connections.",
+                quote: "Switching to Verizon Business Internet improved our productivity with faster, more reliable connections.",
                 author: "David L.",
                 business: "Marketing Agency"
               }

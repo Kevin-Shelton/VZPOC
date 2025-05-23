@@ -56,8 +56,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-800 pt-6">
           <div className="flex-shrink-0 mb-4 md:mb-0">
             <div className="text-red-600 font-bold">
-              <span className="text-2xl">Arkansas</span>
-              <span className="block text-sm -mt-1">POC</span>
+              <span className="text-2xl">verizon</span>
+              <span className="block text-sm -mt-1">business</span>
             </div>
           </div>
           
@@ -80,7 +80,7 @@ const Footer = () => {
           </div>
           
           <div className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} Arkansas POC. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Verizon. All Rights Reserved.
           </div>
         </div>
       </div>

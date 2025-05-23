@@ -1,12 +1,13 @@
-'use client';
+'use client'
 
-import React from 'react';
-import Link from 'next/link';
-import { ChevronRight } from 'lucide-react';
+import React from 'react'
+import { useTranslation } from '@/components/shared/TranslationProvider'
+import Link from 'next/link'
+import { ChevronRight, Smartphone } from 'lucide-react'
 
 export default function BringYourDevice() {
-  const translate = (key: string) => key; // ✅ safe mock
-
+  const { translate } = useTranslation()
+  
   return (
     <div>
       {/* Hero Section */}
@@ -18,9 +19,9 @@ export default function BringYourDevice() {
                 Bring your own device
               </h1>
               <p className="text-lg mb-6">
-                Keep your current devices and save with Arkansas POC Business plans. It&apos;s easy to switch and bring your own phones.
+                Keep your current devices and save with Verizon Business plans. It's easy to switch and bring your own phones.
               </p>
-              <Link
+              <Link 
                 href="/plans"
                 className="inline-block bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition"
               >
@@ -28,23 +29,17 @@ export default function BringYourDevice() {
               </Link>
             </div>
             <div className="md:w-1/2">
-              <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                <img
-                  src="/images/hero-image1.jpg"
-                  alt="Bring your own device"
-                  className="w-full h-full object-cover"
-                />
+              <div className="aspect-[4/3] bg-gray-200 rounded-lg">
+                {/* Placeholder for image */}
+                <div className="w-full h-full flex items-center justify-center">
+                  <span className="text-gray-500">BYOD Hero Image</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </div>
-  );
-}
-
       
-    
       {/* How It Works Section */}
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
@@ -54,7 +49,7 @@ export default function BringYourDevice() {
             {[
               {
                 title: "Check compatibility",
-                description: "Verify your device is compatible with the Arkansas POC network",
+                description: "Verify your device is compatible with the Verizon network",
                 icon: "📱",
                 step: 1
               },
@@ -217,7 +212,7 @@ export default function BringYourDevice() {
               href="/contact-sales"
               className="inline-block bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition"
             >
-              {"Contact Sales"}
+              {translate('contactSales')}
             </Link>
           </div>
         </div>

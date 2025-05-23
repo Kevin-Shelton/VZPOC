@@ -12,7 +12,7 @@ const Header = () => {
     <header className="w-full">
       {/* Top navigation bar */}
       <div className="border-b border-gray-200">
-        <div className="max-w-[1200px] mx-auto flex items-center justify-between px-4 py-2">
+        <div className="container mx-auto flex items-center justify-between px-4 py-2">
           <div className="flex items-center space-x-6">
             <Link href="/" className="text-sm hover:text-red-600">Personal</Link>
             <Link href="/" className="text-sm font-semibold text-red-600">Business</Link>
@@ -46,11 +46,11 @@ const Header = () => {
       {/* Main header */}
       <div className="border-b border-gray-200">
         <div className="container mx-auto flex items-center justify-between px-4 py-4">
-          <Link href="/" title="Arkansas POC" className="flex-shrink-0">
+          <Link href="/" title="Verizon Business" className="flex-shrink-0">
             <div className="relative h-9 w-36">
               <div className="text-red-600 font-bold">
-                <span className="text-2xl">Arkansas</span>
-                <span className="block text-sm -mt-1">POC</span>
+                <span className="text-2xl">verizon</span>
+                <span className="block text-sm -mt-1">business</span>
               </div>
             </div>
           </Link>
@@ -85,7 +85,7 @@ const Header = () => {
           </div>
           <div className="ml-auto flex items-center space-x-4">
             <Link href="/contact" className="flex items-center text-sm font-semibold">
-              <span className="mr-2">Call Sales:</span> 111-221-1111
+              <span className="mr-2">Call Sales:</span> 888-789-1223
             </Link>
             <Link href="/contact-sales" className="bg-black text-white px-4 py-2 rounded-md text-sm font-semibold">
               Contact sales
@@ -95,21 +95,21 @@ const Header = () => {
       </div>
 
       {/* Category navigation */}
-      <div className="max-w-[1200px] mx-auto px-4 py-4">
-        <div className="flex flex-row flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
-          <Link href="/devices" className="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-semibold">
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <Link href="/devices" className="bg-gray-100 hover:bg-gray-200 px-6 py-3 rounded-md text-sm font-semibold">
             Devices
           </Link>
-          <Link href="/plans" className="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-semibold">
+          <Link href="/plans" className="bg-gray-100 hover:bg-gray-200 px-6 py-3 rounded-md text-sm font-semibold">
             Plans
           </Link>
-          <Link href="/internet" className="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-semibold">
+          <Link href="/internet" className="bg-gray-100 hover:bg-gray-200 px-6 py-3 rounded-md text-sm font-semibold">
             Internet
           </Link>
-          <Link href="/deals" className="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-semibold">
+          <Link href="/deals" className="bg-gray-100 hover:bg-gray-200 px-6 py-3 rounded-md text-sm font-semibold">
             Deals
           </Link>
-          <Link href="/bring-your-device" className="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-semibold">
+          <Link href="/bring-your-device" className="bg-gray-100 hover:bg-gray-200 px-6 py-3 rounded-md text-sm font-semibold">
             Bring your device
           </Link>
         </div>

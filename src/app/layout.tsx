@@ -17,11 +17,9 @@ export default function RootLayout({
         <TranslationProvider>
           <div className="flex flex-col min-h-screen">
             <Header />
-            <main className="flex min-h-screen flex-col">
-  <div className="max-w-[1200px] mx-auto w-full px-4">
-    {children}
-  </div>
-</main>
+            <main className="flex-grow">
+              {children}
+            </main>
             <Footer />
           </div>
         </TranslationProvider>

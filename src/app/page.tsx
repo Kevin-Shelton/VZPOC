@@ -39,7 +39,7 @@ const HeroCarousel = () => {
       <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${activeSlide * 100}%)` }}>
         {slides.map((slide, index) => (
           <div key={index} className={`w-full flex-shrink-0 ${slide.bgColor}`}>
-            <div className="max-w-[1200px] mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center">
+            <div className="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 mb-8 md:mb-0">
                 {slide.subtitle && (
                   <div className="text-red-600 font-bold text-xl mb-2">{slide.subtitle}</div>
@@ -86,17 +86,17 @@ const BusinessSegments = () => {
   const segments = [
     {
       title: "Small Business",
-      image: "/images/hero-image1.jpg",
+      image: "https://picsum.photos/id/1/400/300",
       link: "/small-business"
     },
     {
       title: "Enterprise",
-      image: "/images/hero-image3.jpg",
+      image: "https://picsum.photos/id/2/400/300",
       link: "/enterprise"
     },
     {
       title: "Public Sector",
-      image: "/images/hero-image2.jpg",
+      image: "https://picsum.photos/id/3/400/300",
       link: "/public-sector"
     }
   ]
