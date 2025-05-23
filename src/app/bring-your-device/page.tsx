@@ -28,13 +28,15 @@ export default function BringYourDevice() {
                 View Plans
               </Link>
             </div>
-            <div className="md:w-1/2">
-              <div className="aspect-[4/3] bg-gray-200 rounded-lg">
-                {/* Placeholder for image */}
-                <div className="w-full h-full flex items-center justify-center">
-                  <span className="text-gray-500">BYOD Hero Image</span>
-                </div>
-              </div>
+         <div className="md:w-1/2">
+  <div className="aspect-[4/3] rounded-lg overflow-hidden">
+    <img 
+      src="/images/hero-image1.jpg" 
+      alt="Bring your own device" 
+      className="w-full h-full object-cover"
+    />
+  </div>
+</div>
             </div>
           </div>
         </div>
