@@ -55,12 +55,14 @@ const HeroCarousel = () => {
                 </Link>
               </div>
               <div className="md:w-1/2">
-                <div className="aspect-[4/3] bg-gray-200 rounded-lg">
-                  {/* Placeholder for image */}
-                  <div className="w-full h-full flex items-center justify-center">
-                    <span className="text-gray-500">Image {index + 1}</span>
-                  </div>
-                </div>
+              <div className="aspect-[4/3] rounded-lg overflow-hidden">
+  <img
+    src={slide.image}
+    alt={slide.title}
+    className="w-full h-full object-cover"
+  />
+</div>
+
               </div>
             </div>
           </div>
