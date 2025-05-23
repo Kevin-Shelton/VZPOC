@@ -6,7 +6,8 @@ import Link from 'next/link'
 import { ChevronRight, Smartphone } from 'lucide-react'
 
 export default function BringYourDevice() {
-  const { translate } = useTranslation()
+ const translate = (key: string) => key; // ✅ mock fallback
+
   
   return (
     <div>
@@ -215,7 +216,7 @@ export default function BringYourDevice() {
               href="/contact-sales"
               className="inline-block bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition"
             >
-              {translate('contactSales')}
+              {"Contact Sales"}
             </Link>
           </div>
         </div>
