@@ -1,14 +1,12 @@
-'use client'
+'use client';
 
-import React from 'react'
-import { useTranslation } from '@/components/shared/TranslationProvider'
-import Link from 'next/link'
-import { ChevronRight, } from 'lucide-react'
+import React from 'react';
+import Link from 'next/link';
+import { ChevronRight } from 'lucide-react';
 
 export default function BringYourDevice() {
- const translate = (key: string) => key; // ✅ mock fallback
+  const translate = (key: string) => key; // ✅ safe mock
 
-  
   return (
     <div>
       {/* Hero Section */}
@@ -22,26 +20,29 @@ export default function BringYourDevice() {
               <p className="text-lg mb-6">
                 Keep your current devices and save with Arkansas POC Business plans. It&apos;s easy to switch and bring your own phones.
               </p>
-              <Link 
+              <Link
                 href="/plans"
                 className="inline-block bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition"
               >
                 View Plans
               </Link>
             </div>
-         <div className="md:w-1/2">
-  <div className="aspect-[4/3] rounded-lg overflow-hidden">
-    <img 
-      src="/images/hero-image1.jpg" 
-      alt="Bring your own device" 
-      className="w-full h-full object-cover"
-    />
-  </div>
-</div>
+            <div className="md:w-1/2">
+              <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                <img
+                  src="/images/hero-image1.jpg"
+                  alt="Bring your own device"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
+    </div>
+  );
+}
+
       
     
       {/* How It Works Section */}
