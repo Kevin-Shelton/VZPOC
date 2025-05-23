@@ -284,7 +284,7 @@ const LanguageSelector = () => {
 
 export default function Home() {
   return (
-    <div>
+    <div className="max-w-[1200px] mx-auto">
       <HeroCarousel />
       <BusinessSegments />
       <ProductGrid />
