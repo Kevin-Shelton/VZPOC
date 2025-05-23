@@ -3,7 +3,7 @@
 import React from 'react'
 import { useTranslation } from '@/components/shared/TranslationProvider'
 import Link from 'next/link'
-import { ChevronRight, Smartphone } from 'lucide-react'
+import { ChevronRight, } from 'lucide-react'
 
 export default function BringYourDevice() {
  const translate = (key: string) => key; // ✅ mock fallback
@@ -20,7 +20,7 @@ export default function BringYourDevice() {
                 Bring your own device
               </h1>
               <p className="text-lg mb-6">
-                Keep your current devices and save with Arkansas POC Business plans. It's easy to switch and bring your own phones.
+                Keep your current devices and save with Arkansas POC Business plans. It&apos;s easy to switch and bring your own phones.
               </p>
               <Link 
                 href="/plans"
