@@ -19,7 +19,7 @@ export default function Solutions() {
                 Business solutions for every challenge
               </h1>
               <p className="text-lg mb-6">
-                Discover how Verizon Business can help solve your most pressing business challenges with our comprehensive solutions.
+                Discover how POC Business can help solve your most pressing business challenges with our comprehensive solutions.
               </p>
               <Link 
                 href="/contact-sales"

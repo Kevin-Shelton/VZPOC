@@ -19,7 +19,7 @@ export default function Deals() {
                 Business deals & promotions
               </h1>
               <p className="text-lg mb-6">
-                Save on the latest devices, plans, and business solutions with exclusive offers for Verizon Business customers.
+                Save on the latest devices, plans, and business solutions with exclusive offers for POC Business customers.
               </p>
               <Link 
                 href="/contact-sales"

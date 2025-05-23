@@ -19,7 +19,7 @@ export default function BringYourDevice() {
                 Bring your own device
               </h1>
               <p className="text-lg mb-6">
-                Keep your current devices and save with Verizon Business plans. It&apos;s easy to switch and bring your own phones.
+                Keep your current devices and save with POC Business plans. It&apos;s easy to switch and bring your own phones.
               </p>
               <Link 
                 href="/plans"
@@ -49,7 +49,7 @@ export default function BringYourDevice() {
             {[
               {
                 title: "Check compatibility",
-                description: "Verify your device is compatible with the Verizon network",
+                description: "Verify your device is compatible with the POC network",
                 icon: "📱",
                 step: 1
               },
@@ -184,16 +184,16 @@ export default function BringYourDevice() {
           <div className="max-w-3xl mx-auto">
             {[
               {
-                question: "Will my device work on Verizon's network?",
-                answer: "Most unlocked 4G LTE and 5G devices are compatible with Verizon's network. You can check your specific device compatibility using our online tool or by contacting our business support team."
+                question: "Will my device work on POC's network?",
+                answer: "Most unlocked 4G LTE and 5G devices are compatible with POC's network. You can check your specific device compatibility using our online tool or by contacting our business support team."
               },
               {
                 question: "Can I keep my current phone number?",
-                answer: "Yes, you can transfer (port) your existing phone number to Verizon when you switch. This process typically takes 2-24 hours to complete."
+                answer: "Yes, you can transfer (port) your existing phone number to POC when you switch. This process typically takes 2-24 hours to complete."
               },
               {
                 question: "Do I need a new SIM card?",
-                answer: "Yes, you'll need a Verizon SIM card to connect to our network. We can provide SIM cards for all your devices when you sign up for service."
+                answer: "Yes, you'll need a POC SIM card to connect to our network. We can provide SIM cards for all your devices when you sign up for service."
               },
               {
                 question: "What plans can I choose from when bringing my own device?",
