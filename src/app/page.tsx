@@ -91,12 +91,12 @@ const BusinessSegments = () => {
     },
     {
       title: "Enterprise",
-      image: "/images/hero-image2.jpg",
+      image: "/images/hero-image3.jpg",
       link: "/enterprise"
     },
     {
       title: "Public Sector",
-      image: "/images/hero-image3.jpg",
+      image: "/images/hero-image2.jpg",
       link: "/public-sector"
     }
   ]
