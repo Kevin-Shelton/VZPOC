@@ -22,6 +22,7 @@ const HeroCarousel = () => {
       subtitle: "Introducing",
       description: "as low as $25/line",
       subDescription: "Take control of your mobile plan at our best price, guaranteed for 3 years.",
+      image: "/images/image5.jpg", // ✅ Must be relative to /public
       cta: "Learn more",
       ctaLink: "/plans/my-biz-plan",
       bgColor: "bg-amber-50"
@@ -29,6 +30,7 @@ const HeroCarousel = () => {
     {
       title: "Get Business Internet starting at $69/mo",
       description: "Plus, router on us w/monthly payment plan and no annual service contracts.",
+      image: "/images/image6.jpg", // ✅ Must be relative to /public
       cta: "Check my address",
       ctaLink: "/internet/business",
       bgColor: "bg-gray-900 text-white"
