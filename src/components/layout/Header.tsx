@@ -95,8 +95,8 @@ const Header = () => {
       </div>
 
       {/* Category navigation */}
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex flex-wrap items-center justify-between gap-2">
+      <div className="max-w-[1200px] mx-auto px-4 py-4">
+        <div className="flex flex-wrap items-center gap-4">
           <Link href="/devices" className="bg-gray-100 hover:bg-gray-200 px-6 py-3 rounded-md text-sm font-semibold">
             Devices
           </Link>
