@@ -96,20 +96,20 @@ const Header = () => {
 
       {/* Category navigation */}
       <div className="max-w-[1200px] mx-auto px-4 py-4">
-        <div className="flex flex-wrap items-center gap-4">
-          <Link href="/devices" className="bg-gray-100 hover:bg-gray-200 px-6 py-3 rounded-md text-sm font-semibold">
+        <div className="flex flex-row flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
+          <Link href="/devices" className="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-semibold">
             Devices
           </Link>
-          <Link href="/plans" className="bg-gray-100 hover:bg-gray-200 px-6 py-3 rounded-md text-sm font-semibold">
+          <Link href="/plans" className="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-semibold">
             Plans
           </Link>
-          <Link href="/internet" className="bg-gray-100 hover:bg-gray-200 px-6 py-3 rounded-md text-sm font-semibold">
+          <Link href="/internet" className="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-semibold">
             Internet
           </Link>
-          <Link href="/deals" className="bg-gray-100 hover:bg-gray-200 px-6 py-3 rounded-md text-sm font-semibold">
+          <Link href="/deals" className="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-semibold">
             Deals
           </Link>
-          <Link href="/bring-your-device" className="bg-gray-100 hover:bg-gray-200 px-6 py-3 rounded-md text-sm font-semibold">
+          <Link href="/bring-your-device" className="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-semibold">
             Bring your device
           </Link>
         </div>
