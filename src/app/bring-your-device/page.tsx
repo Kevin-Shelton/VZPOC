@@ -42,6 +42,7 @@ export default function BringYourDevice() {
         </div>
       </section>
       
+    
       {/* How It Works Section */}
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
