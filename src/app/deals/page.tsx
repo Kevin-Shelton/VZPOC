@@ -50,21 +50,21 @@ export default function Deals() {
               {
                 title: "Get iPhone 16 on us",
                 description: "128GB model & Online only. New line & My Biz Plan with $20 monthly add-on spending select data plan req'd. Terms apply; limited time digital exclusive offer.",
-                image: "https://picsum.photos/id/1/400/300",
+                image: "/images/image4.jpg",
                 cta: translate('buyNow'),
                 link: "/devices/iphone"
               },
               {
                 title: "Save $500 on business tablets",
                 description: "When you add a new tablet line with eligible data plan. Limited time offer.",
-                image: "https://picsum.photos/id/2/400/300",
+                image: "/images/image5.jpg",
                 cta: translate('learnMore'),
                 link: "/devices/tablets"
               },
               {
                 title: "Free router with Business Internet",
                 description: "Get a free router when you sign up for Business Internet with monthly payment plan. No annual contracts.",
-                image: "https://picsum.photos/id/3/400/300",
+                image: "/images/image6.jpg",
                 cta: translate('checkAddress'),
                 link: "/internet/check-address"
               }
