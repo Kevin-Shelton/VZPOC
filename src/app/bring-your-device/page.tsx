@@ -3,7 +3,7 @@
 import React from 'react'
 import { useTranslation } from '@/components/shared/TranslationProvider'
 import Link from 'next/link'
-import { ChevronRight, Smartphone } from 'lucide-react'
+import { ChevronRight, } from 'lucide-react'
 
 export default function BringYourDevice() {
   const { translate } = useTranslation()
