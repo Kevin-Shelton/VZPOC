@@ -12,6 +12,7 @@ const HeroCarousel = () => {
     {
       title: "Get iPhone 16 on us",
       description: "128GB model & Online only. New line & My Biz Plan with $20 monthly add-on spending select data plan req'd. Terms apply; limited time digital exclusive offer.",
+      image: "/images/image4.jpg", // ✅ Must be relative to /public
       cta: "Buy now",
       ctaLink: "/devices/iphone",
       bgColor: "bg-amber-50"
