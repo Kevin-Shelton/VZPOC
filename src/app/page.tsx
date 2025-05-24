@@ -11,33 +11,64 @@ const HeroSection = () => {
     <section className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10 px-4">
       {/* Top Left: Product Showcase */}
       <div className="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center">
-        <img src="/images/image4.jpg" alt="Product" className="w-full md:w-1/2 rounded-md object-cover mr-4" />
+        <img
+          src="/images/image4.jpg"
+          alt={translate('heroTitle')}
+          className="w-full md:w-1/2 rounded-md object-cover mr-4"
+        />
         <div className="mt-4 md:mt-0 md:w-1/2">
-          <h2 className="text-2xl font-bold mb-2 text-gray-900">{translate('heroTitle')}</h2>
-          <p className="text-sm text-gray-700 mb-4">{translate('heroDescription')}</p>
-          <Link href="/devices/iphone" className="inline-block bg-black text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-800 transition">
+          <h2 className="text-2xl font-bold mb-2 text-gray-900">
+            {translate('heroTitle')}
+          </h2>
+          <p className="text-sm text-gray-700 mb-4">
+            {translate('heroDescription')}
+          </p>
+          <Link
+            href="/devices/iphone"
+            className="inline-block bg-black text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-800 transition"
+          >
             {translate('buyNow')}
           </Link>
         </div>
       </div>
 
       {/* Top Right: Service Offer */}
-      <div className="relative bg-cover bg-center rounded-lg shadow-md overflow-hidden" style={{ backgroundImage: "url('/images/image5.jpg')" }}>
+      <div
+        className="relative bg-cover bg-center rounded-lg shadow-md overflow-hidden"
+        style={{ backgroundImage: "url('/images/image5.jpg')" }}
+      >
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start p-6">
-          <h2 className="text-white text-2xl font-bold mb-2">My Biz Plan</h2>
-          <p className="text-white text-sm mb-4">Starting at $25/line for 3 years guaranteed.</p>
-          <Link href="/plans/my-biz-plan" className="inline-block bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition">
+          <h2 className="text-white text-2xl font-bold mb-2">
+            {translate('productsTitle')}
+          </h2>
+          <p className="text-white text-sm mb-4">
+            Take control of your mobile plan at our best price, guaranteed for 3 years.
+          </p>
+          <Link
+            href="/plans/my-biz-plan"
+            className="inline-block bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition"
+          >
             {translate('learnMore')}
           </Link>
         </div>
       </div>
 
-      {/* Bottom Full-Width: CTA Section */}
-      <div className="md:col-span-2 relative bg-cover bg-center rounded-lg shadow-md overflow-hidden mt-4" style={{ backgroundImage: "url('/images/image6.jpg')" }}>
+      {/* Bottom Full-Width CTA */}
+      <div
+        className="md:col-span-2 relative bg-cover bg-center rounded-lg shadow-md overflow-hidden"
+        style={{ backgroundImage: "url('/images/image6.jpg')" }}
+      >
         <div className="absolute inset-0 bg-gray-900 bg-opacity-60 flex flex-col justify-center items-start p-6">
-          <h2 className="text-white text-2xl font-bold mb-2">Get Business Internet for $69/mo</h2>
-          <p className="text-white text-sm mb-4">Includes router with monthly payment plan. No service contracts.</p>
-          <Link href="/internet/business" className="inline-block bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-200 transition">
+          <h2 className="text-white text-2xl font-bold mb-2">
+            Get Business Internet for $69/mo
+          </h2>
+          <p className="text-white text-sm mb-4">
+            Includes router with monthly payment plan. No service contracts.
+          </p>
+          <Link
+            href="/internet/business"
+            className="inline-block bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-200 transition"
+          >
             {translate('checkAddress')}
           </Link>
         </div>
@@ -56,16 +87,25 @@ const BusinessSegments = () => {
   return (
     <section className="py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-red-600 mb-12">Let's build the future of business together</h2>
+        <h2 className="text-4xl font-bold text-red-600 mb-12">
+          Let's build the future of business together
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {segments.map((segment, index) => (
             <div key={index} className="rounded-xl overflow-hidden border border-gray-200">
               <div className="aspect-[4/3] relative">
-                <img src={segment.image} alt={segment.title} className="w-full h-full object-cover" />
+                <img
+                  src={segment.image}
+                  alt={segment.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-4">{segment.title}</h3>
-                <Link href={segment.link} className="inline-flex items-center text-red-600 font-semibold">
+                <Link
+                  href={segment.link}
+                  className="inline-flex items-center text-red-600 font-semibold"
+                >
                   Learn more
                   <ChevronRight size={16} className="ml-1" />
                 </Link>
@@ -89,12 +129,22 @@ const ProductGrid = () => {
   return (
     <section className="py-12 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-red-600 mb-12">Products to help you do more</h2>
+        <h2 className="text-4xl font-bold text-red-600 mb-12">
+          Products to help you do more
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product, index) => (
-            <Link key={index} href={product.link} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition group">
+            <Link
+              key={index}
+              href={product.link}
+              className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition group"
+            >
               <div className="aspect-[4/3] relative">
-                <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6 flex justify-between items-center">
                 <h3 className="text-xl font-bold">{product.title}</h3>
@@ -112,7 +162,9 @@ const SolutionsSection = () => {
   return (
     <section className="py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-red-600 mb-12">Solutions for key needs</h2>
+        <h2 className="text-4xl font-bold text-red-600 mb-12">
+          Solutions for key needs
+        </h2>
         <div className="bg-amber-50 rounded-xl overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="p-8 md:p-12">
@@ -120,18 +172,29 @@ const SolutionsSection = () => {
               <p className="text-lg mb-6">
                 Help enhance the protections for your business data with purpose-built solutions backed by decades of expertise.
               </p>
-              <Link href="/solutions/cybersecurity" className="inline-flex items-center bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition">
+              <Link
+                href="/solutions/cybersecurity"
+                className="inline-flex items-center bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition"
+              >
                 Learn more
               </Link>
             </div>
             <div className="aspect-auto md:aspect-auto bg-gray-200">
-              <img src="https://picsum.photos/id/8/800/500" alt="Cybersecurity" className="w-full h-full object-cover" />
+              <img
+                src="https://picsum.photos/id/8/800/500"
+                alt="Cybersecurity"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-8">
             <div className="bg-white rounded-lg overflow-hidden shadow-sm">
               <div className="aspect-[4/3] relative">
-                <img src="https://picsum.photos/id/9/400/300" alt="DBIR" className="w-full h-full object-cover" />
+                <img
+                  src="https://picsum.photos/id/9/400/300"
+                  alt="DBIR"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">DBIR</h3>
@@ -140,51 +203,11 @@ const SolutionsSection = () => {
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-sm">
               <div className="aspect-[4/3] relative">
-                <img src="https://picsum.photos/id/10/400/300" alt="Small Business cybersecurity" className="w-full h-full object-cover" />
+                <img
+                  src="https://picsum.photos/id/10/400/300"
+                  alt="Small Business cybersecurity"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Small Business cybersecurity</h3>
-                <button className="text-2xl absolute bottom-4 right-4">+</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-const LanguageSelector = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState('en')
-  const languages = [
-    { code: 'en', name: 'English' },
-    { code: 'es', name: 'Español' },
-    { code: 'fr', name: 'Français' },
-    { code: 'de', name: 'Deutsch' },
-    { code: 'zh', name: '中文' },
-    { code: 'ja', name: '日本語' }
-  ]
-
-  return (
-    <div className="fixed bottom-4 right-4 z-50 bg-white shadow-lg rounded-lg p-4">
-      <div className="text-sm font-semibold mb-2">Translate Page:</div>
-      <select value={selectedLanguage} onChange={(e) => setSelectedLanguage(e.target.value)} className="w-full border border-gray-300 rounded px-2 py-1">
-        {languages.map((lang) => (
-          <option key={lang.code} value={lang.code}>{lang.name}</option>
-        ))}
-      </select>
-    </div>
-  )
-}
-
-export default function Home() {
-  return (
-    <div className="max-w-[1200px] mx-auto">
-      <HeroSection />
-      <BusinessSegments />
-      <ProductGrid />
-      <SolutionsSection />
-      <LanguageSelector />
-    </div>
-  )
-}
+                <h3 className="text-xl font-bold mb-2">Small Business cybersecurity</n
