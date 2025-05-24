@@ -49,19 +49,19 @@ export default function Mobile() {
             {[
               {
                 title: "My Biz Plan",
-                price: "$25",
+                price: "25",
                 description: "Perfect for small businesses with 1-4 lines",
                 features: ["Unlimited talk & text", "Unlimited data", "5G access"]
               },
               {
                 title: "Business Unlimited",
-                price: "$35",
+                price: "35",
                 description: "Great for growing businesses with 5+ lines",
                 features: ["Unlimited talk & text", "Unlimited premium data", "5G Ultra Wideband"]
               },
               {
                 title: "Business Unlimited Pro",
-                price: "$45",
+                price: "45",
                 description: "Ideal for enterprises with 10+ lines",
                 features: ["Unlimited talk & text", "Unlimited premium data", "5G Ultra Wideband", "Mobile hotspot"]
               }
