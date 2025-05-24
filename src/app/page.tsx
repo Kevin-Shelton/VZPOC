@@ -8,47 +8,38 @@ import { useTranslation } from '@/components/shared/TranslationProvider'
 const HeroSection = () => {
   const { translate } = useTranslation()
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3 gap-4 py-10">
-      {/* iPhone 16 Offer */}
-      <div className="bg-amber-50 p-6 rounded-lg flex flex-col justify-between">
-        <div>
-          <h1 className="text-red-600 text-2xl font-bold mb-2">{translate('heroTitle')}</h1>
-          <p className="text-sm text-gray-800 mb-4">{translate('heroDescription')}</p>
-          <Link href="/devices/iphone" className="inline-block bg-white text-black border border-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-black hover:text-white transition">
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10 px-4">
+      {/* Top Left: Product Showcase */}
+      <div className="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center">
+        <img src="/images/image4.jpg" alt="Product" className="w-full md:w-1/2 rounded-md object-cover mr-4" />
+        <div className="mt-4 md:mt-0 md:w-1/2">
+          <h2 className="text-2xl font-bold mb-2 text-gray-900">{translate('heroTitle')}</h2>
+          <p className="text-sm text-gray-700 mb-4">{translate('heroDescription')}</p>
+          <Link href="/devices/iphone" className="inline-block bg-black text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-800 transition">
             {translate('buyNow')}
           </Link>
         </div>
-        <div className="mt-4">
-          <img src="/images/image4.jpg" alt="iPhone 16" className="w-full rounded-lg" />
-        </div>
       </div>
 
-      {/* My Biz Plan */}
-      <div className="bg-amber-50 p-6 rounded-lg flex flex-col justify-between">
-        <div>
-          <span className="text-xl font-bold text-red-600 block mb-1">{translate('productsTitle')}</span>
-          <h2 className="text-2xl font-bold mb-2">My Biz Plan<br /><span className="text-lg font-normal">as low as $25/line</span></h2>
-          <p className="text-sm text-gray-800 mb-4">Take control of your mobile plan at our best price, guaranteed for 3 years.</p>
-          <Link href="/plans/my-biz-plan" className="inline-block bg-black text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-800 transition">
+      {/* Top Right: Service Offer */}
+      <div className="relative bg-cover bg-center rounded-lg shadow-md overflow-hidden" style={{ backgroundImage: "url('/images/image5.jpg')" }}>
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start p-6">
+          <h2 className="text-white text-2xl font-bold mb-2">My Biz Plan</h2>
+          <p className="text-white text-sm mb-4">Starting at $25/line for 3 years guaranteed.</p>
+          <Link href="/plans/my-biz-plan" className="inline-block bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition">
             {translate('learnMore')}
           </Link>
         </div>
-        <div className="mt-4">
-          <img src="/images/image5.jpg" alt="My Biz Plan" className="w-full rounded-lg" />
-        </div>
       </div>
 
-      {/* Business Internet Offer */}
-      <div className="bg-gray-900 text-white p-6 rounded-lg flex flex-col justify-between">
-        <div>
-          <h2 className="text-xl font-bold mb-2">Get Business Internet starting at $69/mo</h2>
-          <p className="text-sm mb-4">Plus, router on us w/monthly payment plan and no annual service contracts.</p>
+      {/* Bottom Full-Width: CTA Section */}
+      <div className="md:col-span-2 relative bg-cover bg-center rounded-lg shadow-md overflow-hidden mt-4" style={{ backgroundImage: "url('/images/image6.jpg')" }}>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-60 flex flex-col justify-center items-start p-6">
+          <h2 className="text-white text-2xl font-bold mb-2">Get Business Internet for $69/mo</h2>
+          <p className="text-white text-sm mb-4">Includes router with monthly payment plan. No service contracts.</p>
           <Link href="/internet/business" className="inline-block bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-200 transition">
             {translate('checkAddress')}
           </Link>
-        </div>
-        <div className="mt-4">
-          <img src="/images/image6.jpg" alt="Business Internet" className="w-full rounded-lg" />
         </div>
       </div>
     </section>
