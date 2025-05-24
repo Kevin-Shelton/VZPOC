@@ -12,7 +12,7 @@ const Header = () => {
     <header className="w-full">
       {/* Top navigation bar */}
       <div className="border-b border-gray-200">
-        <div className="container mx-auto flex items-center justify-between px-4 py-2">
+        <div className="max-w-[1200px] mx-auto flex items-center justify-between px-4 py-2">
           <div className="flex items-center space-x-6">
             <Link href="/" className="text-sm hover:text-red-600">Personal</Link>
             <Link href="/" className="text-sm font-semibold text-red-600">Business</Link>
@@ -45,7 +45,7 @@ const Header = () => {
 
       {/* Main header */}
       <div className="border-b border-gray-200">
-        <div className="container mx-auto flex items-center justify-between px-4 py-4">
+        <div className="max-w-[1200px] mx-auto flex items-center justify-between px-4 py-2">
           <Link href="/" title="POC Business" className="flex-shrink-0">
             <div className="relative h-9 w-36">
               <div className="text-red-600 font-bold">
@@ -79,13 +79,13 @@ const Header = () => {
 
       {/* Secondary navigation */}
       <div className="bg-gray-100">
-        <div className="container mx-auto flex items-center px-4 py-2">
+        <div className="max-w-[1200px] mx-auto flex items-center justify-between px-4 py-2">
           <div className="flex items-center space-x-1">
             <Link href="/" className="text-xs bg-red-600 text-white px-2 py-1 rounded-sm">Home</Link>
           </div>
           <div className="ml-auto flex items-center space-x-4">
             <Link href="/contact" className="flex items-center text-sm font-semibold">
-              <span className="mr-2">Call Sales:</span> 888-789-1223
+              <span className="mr-2">Call Sales:</span> 111-222-3333
             </Link>
             <Link href="/contact-sales" className="bg-black text-white px-4 py-2 rounded-md text-sm font-semibold">
               Contact sales
@@ -96,7 +96,7 @@ const Header = () => {
 
       {/* Category navigation */}
       <div className="max-w-[1200px] mx-auto px-4 py-4">
-        <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="flex flex-wrap items-center justify-center space-x-2">
           <Link href="/devices" className="bg-gray-100 hover:bg-gray-200 px-6 py-3 rounded-md text-sm font-semibold">
             Devices
           </Link>
