@@ -13,64 +13,71 @@ const HeroSection = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-12 gap-6 py-0 mb-12">
       {/* Left panel: iPhone 16 offer */}
-      <div className="md:col-span-6 bg-amber-50 rounded-lg overflow-hidden shadow-lg">
-        <div className="p-8 md:p-10 flex flex-col h-full">
+      <div className="md:col-span-7 bg-amber-50 rounded-lg overflow-hidden shadow-sm h-[600px] flex flex-col">
+        <div className="p-6 md:p-8 flex flex-col h-full">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-red-600 leading-tight">{translate('heroTitle')}</h2>
-            <p className="text-base md:text-lg mb-6 text-gray-700 max-w-md">{translate('heroDescription')}</p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-gray-900">{translate('heroTitle') || 'Get iPhone 16 on us'}</h2>
+            <p className="text-sm md:text-base mb-4 text-gray-700 max-w-md">
+              {translate('heroDescription') || '128GB model & Online only. New line & My Biz Plan with $20 monthly add-on spending select data plan req\'d. Terms apply; limited time digital exclusive offer.'}
+            </p>
             <Link
               href="/devices/iphone"
-              className="inline-block bg-black text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-gray-800 transition"
+              className="inline-block bg-black text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-gray-800 transition"
             >
-              {translate('buyNow')}
+              {translate('buyNow') || 'Buy now'}
             </Link>
           </div>
-          <div className="mt-8 flex-grow">
+          <div className="mt-6 flex-grow">
             <img
               src="/images/image4.jpg"
               alt="iPhone 16"
-              className="w-full h-auto object-cover rounded-lg"
+              className="w-full h-full object-cover rounded-lg"
             />
           </div>
         </div>
       </div>
 
       {/* Right column */}
-      <div className="md:col-span-6 grid grid-rows-2 gap-6">
+      <div className="md:col-span-5 flex flex-col gap-6 h-[600px]">
         {/* Right top: My Biz Plan */}
-        <div className="bg-white rounded-lg overflow-hidden shadow-lg relative">
-          <div className="absolute top-0 left-0 w-full h-1 bg-yellow-400"></div>
-          <div className="p-8 md:p-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3 text-red-600">My Biz Plan</h2>
-            <div className="mb-4">
-              <span className="text-2xl md:text-3xl font-bold">as low as $25/line</span>
-            </div>
-            <p className="text-base md:text-lg mb-6 text-gray-800 max-w-md">
-              Take control of your mobile plan at our best price, guaranteed for 3 years.
+        <div 
+          className="bg-white rounded-lg overflow-hidden shadow-sm relative h-[280px]"
+          style={{
+            backgroundImage: "url('/images/business-woman.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+          }}
+        >
+          <div className="absolute inset-0 bg-white/80"></div>
+          <div className="p-6 md:p-8 relative z-10 h-full flex flex-col">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-red-600">My Biz Plan</h2>
+            <p className="text-sm md:text-base mb-4 text-gray-800">
+              Starting at $25/line for 3 years guaranteed.
             </p>
-            <Link
-              href="/plans/my-biz-plan"
-              className="inline-block bg-red-600 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-red-700 transition"
-            >
-              {translate('learnMore')}
-            </Link>
+            <div className="mt-auto">
+              <Link
+                href="/plans/my-biz-plan"
+                className="inline-block bg-black text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-gray-800 transition w-full text-center"
+              >
+                {translate('learnMore') || 'Learn more'}
+              </Link>
+            </div>
           </div>
         </div>
 
         {/* Right bottom: Business Internet */}
-        <div className="bg-gray-900 text-white rounded-lg overflow-hidden shadow-lg">
-          <div className="p-8 md:p-10 flex flex-col h-full">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">Get Business Internet</h2>
-            <div className="mb-4">
-              <span className="text-2xl md:text-3xl font-bold">starting at $69/mo</span>
+        <div className="bg-gray-900 text-white rounded-lg overflow-hidden shadow-sm h-[280px] flex flex-col">
+          <div className="p-6 md:p-8 flex flex-col h-full">
+            <h2 className="text-xl md:text-2xl font-bold mb-2">Get Business Internet starting at $69/mo</h2>
+            <p className="text-sm md:text-base mb-4">Plus, router on us w/monthly payment plan and no annual service contracts.</p>
+            <div className="mt-auto">
+              <Link
+                href="/internet/business"
+                className="inline-block bg-white text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-gray-200 transition"
+              >
+                {translate('checkAddress') || 'Check my address'}
+              </Link>
             </div>
-            <p className="text-base md:text-lg mb-6">Plus, router on us w/monthly payment plan and no annual service contracts.</p>
-            <Link
-              href="/internet/business"
-              className="inline-block bg-white text-black px-6 py-3 rounded-full text-sm font-semibold hover:bg-gray-200 transition mt-auto"
-            >
-              {translate('checkAddress')}
-            </Link>
           </div>
         </div>
       </div>
