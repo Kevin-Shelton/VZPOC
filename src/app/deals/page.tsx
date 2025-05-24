@@ -11,8 +11,8 @@ export default function Deals() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-red-600 text-white py-16">
-        <div className="max-w-[1200px] mx-auto px-4">
+      <section className="py-16">
+        <div className="bg-red-600 text-white max-w-[1200px] mx-auto px-4 py-16 rounded-lg shadow-lg">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
