@@ -12,7 +12,7 @@ export default function Deals() {
     <div>
       {/* Hero Section */}
       <section className="bg-red-600 text-white py-16">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1200px] mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -42,7 +42,7 @@ export default function Deals() {
       
       {/* Featured Deals Section */}
       <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1200px] mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">Featured deals</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -100,7 +100,7 @@ export default function Deals() {
       
       {/* Device Deals Section */}
       <section className="py-12 md:py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1200px] mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">Device deals</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -159,7 +159,7 @@ export default function Deals() {
       
       {/* Plan Deals Section */}
       <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1200px] mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">Plan deals</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -194,7 +194,7 @@ export default function Deals() {
       
       {/* Terms Section */}
       <section className="py-8 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1200px] mx-auto px-4">
           <h2 className="text-xl font-bold mb-4">Terms & Conditions</h2>
           <div className="text-sm text-gray-600">
             <p className="mb-2">All offers subject to change. Availability varies. Taxes, fees & terms may apply & vary. 5G: Requires 5G-capable device in 5G coverage area. 5G Ultra Wideband available in select areas.</p>

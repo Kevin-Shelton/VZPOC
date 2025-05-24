@@ -12,7 +12,7 @@ export default function Plans() {
     <div>
       {/* Hero Section */}
       <section className="bg-amber-50 py-16">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1200px] mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <div className="text-red-600 font-bold text-xl mb-2">Introducing</div>
@@ -44,7 +44,7 @@ export default function Plans() {
       
       {/* Plans Comparison Section */}
       <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1200px] mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Compare business plans</h2>
           
           <div className="overflow-x-auto">
@@ -137,7 +137,7 @@ export default function Plans() {
       
       {/* Plan Benefits Section */}
       <section className="py-12 md:py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1200px] mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Why choose POC Business plans?</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -170,7 +170,7 @@ export default function Plans() {
       
       {/* FAQ Section */}
       <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1200px] mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
           
           <div className="max-w-3xl mx-auto">

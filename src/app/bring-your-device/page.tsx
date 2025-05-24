@@ -12,7 +12,7 @@ export default function BringYourDevice() {
     <div>
       {/* Hero Section */}
       <section className="bg-gray-100 py-16">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1200px] mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -42,7 +42,7 @@ export default function BringYourDevice() {
       
       {/* How It Works Section */}
       <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1200px] mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">How it works</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -90,7 +90,7 @@ export default function BringYourDevice() {
       
       {/* Benefits Section */}
       <section className="py-12 md:py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1200px] mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">Benefits of bringing your own device</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -130,7 +130,7 @@ export default function BringYourDevice() {
       
       {/* Compatible Devices Section */}
       <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1200px] mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">Popular compatible devices</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -178,7 +178,7 @@ export default function BringYourDevice() {
       
       {/* FAQ Section */}
       <section className="py-12 md:py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1200px] mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
           
           <div className="max-w-3xl mx-auto">
