@@ -7,78 +7,51 @@ import { useTranslation } from '@/components/shared/TranslationProvider'
 
 const HeroSection = () => {
   const { translate } = useTranslation()
-
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10 px-4">
-      {/* Top Left: Product Showcase */}
-      <div className="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center">
-        <img
-          src="/images/image4.jpg"
-          alt="Product"
-          className="w-full md:w-1/2 rounded-md object-cover mb-4 md:mb-0 md:mr-4"
-        />
-        <div className="md:w-1/2">
-          <h2 className="text-2xl font-bold mb-2 text-gray-900">
-            {translate('heroTitle')}
-          </h2>
-          <p className="text-sm text-gray-700 mb-4">
-            {translate('heroDescription')}
-          </p>
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-6 py-10 px-4">
+      {/* Left panel: iPhone 16 offer, spans two rows */}
+      <div className="bg-amber-50 rounded-lg shadow-md p-6 flex flex-col justify-between">
+        <div>
+          <h2 className="text-2xl font-bold mb-2 text-gray-900">{translate('heroTitle')}</h2>
+          <p className="text-base mb-4 text-gray-700">{translate('heroDescription')}</p>
           <Link
             href="/devices/iphone"
-            className="inline-block bg-black text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-800 transition"
+            className="inline-block bg-black text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-gray-800 transition"
           >
             {translate('buyNow')}
           </Link>
         </div>
-      </div>
-
-      {/* Top Right: Service Offer */}
-      <div
-        className="relative rounded-lg shadow-md overflow-hidden h-64 md:h-auto"
-        style={{
-          backgroundImage: "url('/images/image5.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start p-6">
-          <h2 className="text-white text-2xl font-bold mb-2">My Biz Plan</h2>
-          <p className="text-white text-sm mb-4">
-            Starting at $25/line for 3 years guaranteed.
-          </p>
-          <Link
-            href="/plans/my-biz-plan"
-            className="inline-block bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition"
-          >
-            {translate('learnMore')}
-          </Link>
+        <div className="mt-6">
+          <img
+            src="/images/image4.jpg"
+            alt="iPhone 16"
+            className="w-full h-auto object-cover rounded-lg"
+          />
         </div>
       </div>
 
-      {/* Bottom Full-Width: CTA Section */}
-      <div
-        className="md:col-span-2 relative rounded-lg shadow-md overflow-hidden h-64 md:h-auto"
-        style={{
-          backgroundImage: "url('/images/image6.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-      >
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-60 flex flex-col justify-center items-start p-6">
-          <h2 className="text-white text-2xl font-bold mb-2">
-            Get Business Internet for $69/mo
-          </h2>
-          <p className="text-white text-sm mb-4">
-            Includes router with monthly payment plan. No service contracts.
-          </p>
-          <Link
-            href="/internet/business"
-            className="inline-block bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-200 transition"
-          >
-            {translate('checkAddress')}
-          </Link>
-        </div>
+      {/* Right top: My Biz Plan */}
+      <div className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-center">
+        <h2 className="text-2xl font-bold mb-2 text-red-600">My Biz Plan</h2>
+        <p className="text-base mb-4 text-gray-800">Starting at $25/line for 3 years guaranteed.</p>
+        <Link
+          href="/plans/my-biz-plan"
+          className="inline-block bg-black text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-gray-800 transition"
+        >
+          {translate('learnMore')}
+        </Link>
+      </div>
+
+      {/* Right bottom: Business Internet */}
+      <div className="bg-gray-900 text-white rounded-lg shadow-md p-6 flex flex-col justify-center">
+        <h2 className="text-2xl font-bold mb-2">Get Business Internet starting at $69/mo</h2>
+        <p className="text-base mb-4">Plus, router on us w/monthly payment plan and no annual service contracts.</p>
+        <Link
+          href="/internet/business"
+          className="inline-block bg-white text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-gray-200 transition"
+        >
+          {translate('checkAddress')}
+        </Link>
       </div>
     </section>
   )
@@ -94,25 +67,16 @@ const BusinessSegments = () => {
   return (
     <section className="py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-red-600 mb-12">
-          Let's build the future of business together
-        </h2>
+        <h2 className="text-4xl font-bold text-red-600 mb-12">Let's build the future of business together</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {segments.map((seg, idx) => (
             <div key={idx} className="rounded-xl overflow-hidden border border-gray-200">
               <div className="aspect-[4/3]">
-                <img
-                  src={seg.image}
-                  alt={seg.title}
-                  className="w-full h-full object-cover"
-                />
+                <img src={seg.image} alt={seg.title} className="w-full h-full object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-4">{seg.title}</h3>
-                <Link
-                  href={seg.link}
-                  className="inline-flex items-center text-red-600 font-semibold"
-                >
+                <Link href={seg.link} className="inline-flex items-center text-red-600 font-semibold">
                   Learn more
                   <ChevronRight size={16} className="ml-1" />
                 </Link>
@@ -136,29 +100,16 @@ const ProductGrid = () => {
   return (
     <section className="py-12 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-red-600 mb-12">
-          Products to help you do more
-        </h2>
+        <h2 className="text-4xl font-bold text-red-600 mb-12">Products to help you do more</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((p, i) => (
-            <Link
-              key={i}
-              href={p.link}
-              className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition group"
-            >
+            <Link key={i} href={p.link} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition group">
               <div className="aspect-[4/3]">
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  className="w-full h-full object-cover"
-                />
+                <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
               </div>
               <div className="p-6 flex justify-between items-center">
                 <h3 className="text-xl font-bold">{p.title}</h3>
-                <ChevronRight
-                  size={20}
-                  className="text-gray-400 group-hover:text-red-600 transition"
-                />
+                <ChevronRight size={20} className="text-gray-400 group-hover:text-red-600 transition" />
               </div>
             </Link>
           ))}
@@ -171,59 +122,28 @@ const ProductGrid = () => {
 const SolutionsSection = () => (
   <section className="py-12 md:py-16">
     <div className="container mx-auto px-4">
-      <h2 className="text-4xl font-bold text-red-600 mb-12">
-        Solutions for key needs
-      </h2>
+      <h2 className="text-4xl font-bold text-red-600 mb-12">Solutions for key needs</h2>
       <div className="bg-amber-50 rounded-xl overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="p-8 md:p-12">
             <h3 className="text-3xl font-bold mb-6">Cybersecurity</h3>
-            <p className="text-lg mb-6">
-              Help enhance the protections for your business data with purpose-built solutions backed by decades of expertise.
-            </p>
-            <Link
-              href="/solutions/cybersecurity"
-              className="inline-flex items-center bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition"
-            >
+            <p className="text-lg mb-6">Help enhance the protections for your business data with purpose-built solutions backed by decades of expertise.</p>
+            <Link href="/solutions/cybersecurity" className="inline-flex items-center bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition">
               Learn more
             </Link>
           </div>
           <div className="aspect-[4/3] bg-gray-200">
-            <img
-              src="https://picsum.photos/id/8/800/500"
-              alt="Cybersecurity"
-              className="w-full h-full object-cover"
-            />
+            <img src="https://picsum.photos/id/8/800/500" alt="Cybersecurity" className="w-full h-full object-cover" />
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-8">
           <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-            <div className="aspect-[4/3]">
-              <img
-                src="https://picsum.photos/id/9/400/300"
-                alt="DBIR"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">DBIR</h3>
-              <button className="text-2xl absolute bottom-4 right-4">+</button>
-            </div>
+            <div className="aspect-[4/3]"><img src="https://picsum.photos/id/9/400/300" alt="DBIR" className="w-full h-full object-cover" /></div>
+            <div className="p-6"><h3 className="text-xl font-bold mb-2">DBIR</h3><button className="text-2xl absolute bottom-4 right-4">+</button></div>
           </div>
           <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-            <div className="aspect-[4/3]">
-              <img
-                src="https://picsum.photos/id/10/400/300"
-                alt="Small Business cybersecurity"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">
-                Small Business cybersecurity
-              </h3>
-              <button className="text-2xl absolute bottom-4 right-4">+</button>
-            </div>
+            <div className="aspect-[4/3]"><img src="https://picsum.photos/id/10/400/300" alt="Small Business cybersecurity" className="w-full h-full object-cover" /></div>
+            <div className="p-6"><h3 className="text-xl font-bold mb-2">Small Business cybersecurity</h3><button className="text-2xl absolute bottom-4 right-4">+</button></div>
           </div>
         </div>
       </div>
@@ -245,16 +165,8 @@ const LanguageSelector = () => {
   return (
     <div className="fixed bottom-4 right-4 z-50 bg-white shadow-lg rounded-lg p-4">
       <div className="text-sm font-semibold mb-2">Translate Page:</div>
-      <select
-        value={selectedLanguage}
-        onChange={e => setSelectedLanguage(e.target.value)}
-        className="w-full border border-gray-300 rounded px-2 py-1"
-      >
-        {langs.map(l => (
-          <option key={l.code} value={l.code}>
-            {l.name}
-          </option>
-        ))}
+      <select value={selectedLanguage} onChange={e => setSelectedLanguage(e.target.value)} className="w-full border border-gray-300 rounded px-2 py-1">
+        {langs.map(l => <option key={l.code} value={l.code}>{l.name}</option>)}
       </select>
     </div>
   )
