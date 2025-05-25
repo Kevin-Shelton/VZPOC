@@ -25,8 +25,7 @@ export default function Solutions() {
                 href="/contact-sales"
                 className="inline-block bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition"
               >
-                {translate('contactSales').text}
-              </Link>
+                {translate('contactSales')}              </Link>
             </div>
             <div className="md:w-1/2">
               <div className="aspect-[4/3] bg-gray-200 rounded-lg">
