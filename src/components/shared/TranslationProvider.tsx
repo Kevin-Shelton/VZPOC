@@ -505,7 +505,7 @@ export const Translatable: React.FC<{
   context,
   showLoading = false
 }) => {
-  const { translate, language } = useTranslation();
+  const { translateWithDetails, language } = useTranslation();
   const [result, setResult] = useState<TranslationResult>({
     text: children,
     isTranslated: false,
@@ -515,7 +515,7 @@ export const Translatable: React.FC<{
   
   useEffect(() => {
     // Get initial translation
-    const initialResult = translate(children, {
+    const initialResult = translateWithDetails(children, {
       nonTranslatable,
       context,
       showLoading
@@ -526,7 +526,7 @@ export const Translatable: React.FC<{
     // Re-translate when language changes
     if (language !== 'en') {
       const interval = setInterval(() => {
-        const updatedResult = translate(children, {
+        const updatedResult = translateWithDetails(children, {
           nonTranslatable,
           context,
           showLoading
@@ -540,7 +540,7 @@ export const Translatable: React.FC<{
       
       return () => clearInterval(interval);
     }
-  }, [children, language, nonTranslatable, context, showLoading, translate]);
+  }, [children, language, nonTranslatable, context, showLoading, translateWithDetails]);
   
   // Show loading indicator if requested and translation is pending
   if (showLoading && !result.isTranslated && language !== 'en') {
