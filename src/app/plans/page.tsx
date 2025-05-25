@@ -204,7 +204,7 @@ export default function Plans() {
               href="/contact-sales"
               className="inline-block bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition"
             >
-              {translate('contactSales')}
+              {translate('contactSales').text}
             </Link>
           </div>
         </div>

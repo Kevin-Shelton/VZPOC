@@ -25,7 +25,7 @@ export default function Deals() {
                 href="/contact-sales"
                 className="inline-block bg-white text-red-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
               >
-                {translate('contactSales')}
+                {translate('contactSales').text}
               </Link>
             </div>
             <div className="md:w-1/2">
