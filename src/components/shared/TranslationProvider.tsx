@@ -451,7 +451,7 @@ export const TranslationProvider = ({ children }: { children: React.ReactNode })
         
         {isOpen && (
           <div className="absolute bottom-16 right-0 bg-white rounded-lg shadow-xl p-4 w-64">
-            <div className="font-semibold mb-2">{translate('translatePage').text}</div>
+            <div className="font-semibold mb-2">{translate('translatePage')}</div>
             <div className="max-h-60 overflow-y-auto">
               {languages.map((lang) => (
                 <button
