@@ -289,7 +289,8 @@ function detectNonTranslatableTerms(text: string): string[] {
 interface TranslationContextType {
   language: string;
   setLanguage: (lang: string) => void;
-  translate: (text: string, options?: TranslationOptions) => TranslationResult;
+  translate: (text: string, options?: TranslationOptions) => string;
+  translateWithDetails: (text: string, options?: TranslationOptions) => TranslationResult;
   isLoading: boolean;
 }
 
@@ -297,7 +298,8 @@ interface TranslationContextType {
 const TranslationContext = createContext<TranslationContextType>({
   language: 'en',
   setLanguage: () => {},
-  translate: (key: string) => ({ 
+  translate: (key: string) => key,
+  translateWithDetails: (key: string) => ({ 
     text: key, 
     isTranslated: false, 
     source: 'original',
@@ -313,8 +315,8 @@ export const TranslationProvider = ({ children }: { children: React.ReactNode })
   const [isOpen, setIsOpen] = useState(false);
   const [pendingTranslations, setPendingTranslations] = useState<Map<string, string>>(new Map());
   
-  // Function to translate text
-  const translate = useCallback((
+  // Function to translate text with details (returns TranslationResult)
+  const translateWithDetails = useCallback((
     text: string, 
     options?: TranslationOptions
   ): TranslationResult => {
@@ -371,6 +373,17 @@ export const TranslationProvider = ({ children }: { children: React.ReactNode })
     };
   }, [language, pendingTranslations]);
   
+  // Backward-compatible translate function (returns string)
+  const translate = useCallback((
+    text: string,
+    options?: TranslationOptions
+  ): string => {
+    // Get the full translation result
+    const result = translateWithDetails(text, options);
+    // Return just the text part for backward compatibility
+    return result.text;
+  }, [translateWithDetails]);
+  
   // Queue text for translation
   const queueForTranslation = useCallback((
     text: string,
@@ -420,6 +433,7 @@ export const TranslationProvider = ({ children }: { children: React.ReactNode })
     language,
     setLanguage,
     translate,
+    translateWithDetails,
     isLoading
   };
   
