@@ -30,7 +30,7 @@ export const TranslatableText: React.FC<{
   showLoading = false,
   className = ''
 }) => {
-  const { translate, language } = useTranslation();
+  const { translate, translateWithDetails, language } = useTranslation();
   const [translatedText, setTranslatedText] = useState(text);
   const [isLoading, setIsLoading] = useState(language !== 'en');
   
@@ -45,7 +45,7 @@ export const TranslatableText: React.FC<{
     setIsLoading(true);
     
     // Get initial translation
-    const result = translate(text, {
+    const result = translateWithDetails(text, {
       nonTranslatable,
       context
     });
@@ -56,7 +56,7 @@ export const TranslatableText: React.FC<{
     } else {
       // Set up polling for translation
       const interval = setInterval(() => {
-        const updatedResult = translate(text, {
+        const updatedResult = translateWithDetails(text, {
           nonTranslatable,
           context
         });
@@ -70,7 +70,7 @@ export const TranslatableText: React.FC<{
       
       return () => clearInterval(interval);
     }
-  }, [text, language, nonTranslatable, context, translate]);
+  }, [text, language, nonTranslatable, context, translateWithDetails]);
   
   if (isLoading && showLoading) {
     return (
