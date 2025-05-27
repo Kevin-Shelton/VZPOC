@@ -5,8 +5,6 @@ import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 import { useTranslation } from '@/components/shared/TranslationProvider'
 import Script from 'next/script'
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
 
 // Import Google Fonts in your layout.tsx or add to globals.css:
 // @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
@@ -281,18 +279,12 @@ export default function Home() {
       </Script>
       
       {/* Main content */}
-      <div className="flex flex-col min-h-screen">
-        <Header />
-        <main className="flex-grow">
-          <div className="max-w-[1200px] mx-auto px-4">
-            <HeroSection />
-            <BusinessSegments />
-            <ProductGrid />
-            <SolutionsSection />
-            <LanguageSelector />
-          </div>
-        </main>
-        <Footer />
+      <div className="max-w-[1200px] mx-auto px-4">
+        <HeroSection />
+        <BusinessSegments />
+        <ProductGrid />
+        <SolutionsSection />
+        <LanguageSelector />
       </div>
     </>
   )
