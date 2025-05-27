@@ -5,21 +5,6 @@ import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 import { useTranslation } from '@/components/shared/TranslationProvider'
 
-// TypeScript declaration for LeadConnectorChatSettings
-declare global {
-  interface Window {
-    LeadConnectorChatSettings: {
-      widgetId: string;
-      visitor?: {
-        externalId?: string;
-        name?: string;
-        email?: string;
-        phone?: string;
-      };
-    };
-  }
-}
-
 // Import Google Fonts in your layout.tsx or add to globals.css:
 // @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
