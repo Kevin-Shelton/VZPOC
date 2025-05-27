@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 import { useTranslation } from '@/components/shared/TranslationProvider'
+import Script from 'next/script'
 
 // Import Google Fonts in your layout.tsx or add to globals.css:
 // @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
@@ -241,6 +242,29 @@ const LanguageSelector = () => {
 export default function Home() {
   return (
     <div className="max-w-[1200px] mx-auto px-4">
+      {/* LeadConnector Chat Widget */}
+      <Script id="leadconnector-settings" strategy="beforeInteractive">
+        {`
+          window.LeadConnectorChatSettings = {
+            widgetId: "67a1422f5217fddb3070bf21",
+            // Optional: if your site already knows who this user is, pass it here:
+            visitor: {
+              externalId: "USER_1234",       // your own unique ID for this person
+              name:       "Jane Doe",
+              email:      "jane.doe@example.com",
+              phone:      "+15551234567"
+            }
+          };
+        `}
+      </Script>
+      
+      <Script 
+        id="leadconnector-widget" 
+        src="https://beta.leadconnectorhq.com/loader.js"
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
+        strategy="afterInteractive"
+      />
+      
       <HeroSection />
       <BusinessSegments />
       <ProductGrid />
