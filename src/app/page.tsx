@@ -1,48 +1,15 @@
 'use client'
 
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 import { useTranslation } from '@/components/shared/TranslationProvider'
+import Script from 'next/script'
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
 
 // Import Google Fonts in your layout.tsx or add to globals.css:
 // @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-
-// LeadConnector Chat Widget Component
-const LeadConnectorChat = () => {
-  const scriptLoaded = useRef(false);
-
-  useEffect(() => {
-    if (scriptLoaded.current) return;
-    
-    // Create the div element
-    const chatDiv = document.createElement('div');
-    chatDiv.setAttribute('data-chat-widget', '');
-    chatDiv.setAttribute('data-widget-id', '67a1422f5217fddb3070bf21');
-    document.body.appendChild(chatDiv);
-    
-    // Create and load the script
-    const script = document.createElement('script');
-    script.src = "https://beta.leadconnectorhq.com/loader.js";
-    script.setAttribute('data-resources-url', 'https://beta.leadconnectorhq.com/chat-widget/loader.js');
-    script.setAttribute('data-widget-id', '67a1422f5217fddb3070bf21');
-    document.body.appendChild(script);
-    
-    scriptLoaded.current = true;
-    
-    // Clean up function
-    return () => {
-      if (document.body.contains(chatDiv)) {
-        document.body.removeChild(chatDiv);
-      }
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []); // Empty dependency array means this runs once on mount
-  
-  return null; // This component doesn't render anything visible
-};
 
 const HeroSection = () => {
   const { translate } = useTranslation()
@@ -275,16 +242,58 @@ const LanguageSelector = () => {
 }
 
 export default function Home() {
+  // Effect to add LeadConnector chat widget
+  useEffect(() => {
+    // Create the div element
+    const chatDiv = document.createElement('div');
+    chatDiv.setAttribute('data-chat-widget', '');
+    chatDiv.setAttribute('data-widget-id', '67a1422f5217fddb3070bf21');
+    document.body.appendChild(chatDiv);
+    
+    // Create and load the script
+    const script = document.createElement('script');
+    script.src = "https://beta.leadconnectorhq.com/loader.js";
+    script.setAttribute('data-resources-url', 'https://beta.leadconnectorhq.com/chat-widget/loader.js');
+    script.setAttribute('data-widget-id', '67a1422f5217fddb3070bf21');
+    document.body.appendChild(script);
+    
+    // Clean up function
+    return () => {
+      if (document.body.contains(chatDiv)) {
+        document.body.removeChild(chatDiv);
+      }
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
-    <div className="max-w-[1200px] mx-auto px-4">
-      {/* Include the LeadConnector Chat Widget Component */}
-      <LeadConnectorChat />
+    <>
+      {/* Add Roboto font */}
+      <Script id="google-fonts" strategy="beforeInteractive">
+        {`
+          let link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap';
+          document.head.appendChild(link);
+        `}
+      </Script>
       
-      <HeroSection />
-      <BusinessSegments />
-      <ProductGrid />
-      <SolutionsSection />
-      <LanguageSelector />
-    </div>
+      {/* Main content */}
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-grow">
+          <div className="max-w-[1200px] mx-auto px-4">
+            <HeroSection />
+            <BusinessSegments />
+            <ProductGrid />
+            <SolutionsSection />
+            <LanguageSelector />
+          </div>
+        </main>
+        <Footer />
+      </div>
+    </>
   )
 }
