@@ -6,9 +6,6 @@ import { ChevronRight } from 'lucide-react'
 import { useTranslation } from '@/components/shared/TranslationProvider'
 import Script from 'next/script'
 
-// Import Google Fonts in your layout.tsx or add to globals.css:
-// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-
 const HeroSection = () => {
   const { translate } = useTranslation()
   return (
@@ -240,32 +237,6 @@ const LanguageSelector = () => {
 }
 
 export default function Home() {
-  // Effect to add LeadConnector chat widget
-  useEffect(() => {
-    // Create the div element
-    const chatDiv = document.createElement('div');
-    chatDiv.setAttribute('data-chat-widget', '');
-    chatDiv.setAttribute('data-widget-id', '67a1422f5217fddb3070bf21');
-    document.body.appendChild(chatDiv);
-    
-    // Create and load the script
-    const script = document.createElement('script');
-    script.src = "https://beta.leadconnectorhq.com/loader.js";
-    script.setAttribute('data-resources-url', 'https://beta.leadconnectorhq.com/chat-widget/loader.js');
-    script.setAttribute('data-widget-id', '67a1422f5217fddb3070bf21');
-    document.body.appendChild(script);
-    
-    // Clean up function
-    return () => {
-      if (document.body.contains(chatDiv)) {
-        document.body.removeChild(chatDiv);
-      }
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
-
   return (
     <>
       {/* Add Roboto font */}
@@ -277,6 +248,25 @@ export default function Home() {
           document.head.appendChild(link);
         `}
       </Script>
+      
+      {/* LeadConnector Chat Widget */}
+      <Script 
+        id="leadconnector-chat"
+        strategy="afterInteractive"
+        src="https://beta.leadconnectorhq.com/loader.js"
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
+        data-widget-id="67a1422f5217fddb3070bf21"
+        onLoad={() => console.log('Chat widget script loaded successfully')}
+        onError={(e) => console.error('Chat widget script failed to load', e)}
+      />
+      
+      {/* Chat widget container */}
+      <div 
+        id="leadconnector-chat-container"
+        data-chat-widget
+        data-widget-id="67a1422f5217fddb3070bf21"
+        style={{ display: 'none' }} // Initially hidden to prevent layout shift
+      />
       
       {/* Main content */}
       <div className="max-w-[1200px] mx-auto px-4">
