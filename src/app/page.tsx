@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 import { useTranslation } from '@/components/shared/TranslationProvider'
@@ -10,28 +10,31 @@ import { useTranslation } from '@/components/shared/TranslationProvider'
 
 // LeadConnector Chat Widget Component
 const LeadConnectorChat = () => {
+  const scriptLoaded = useRef(false);
+
   useEffect(() => {
-    // Set up the visitor context
-    window.LeadConnectorChatSettings = {
-      widgetId: "67a1422f5217fddb3070bf21",
-      // Optional: if your site already knows who this user is, pass it here:
-      visitor: {
-        externalId: "USER_1234",       // your own unique ID for this person
-        name:       "Jane Doe",
-        email:      "jane.doe@example.com",
-        phone:      "+15551234567"
-      }
-    };
+    if (scriptLoaded.current) return;
     
-    // Load the chat widget script
+    // Create the div element
+    const chatDiv = document.createElement('div');
+    chatDiv.setAttribute('data-chat-widget', '');
+    chatDiv.setAttribute('data-widget-id', '67a1422f5217fddb3070bf21');
+    document.body.appendChild(chatDiv);
+    
+    // Create and load the script
     const script = document.createElement('script');
     script.src = "https://beta.leadconnectorhq.com/loader.js";
     script.setAttribute('data-resources-url', 'https://beta.leadconnectorhq.com/chat-widget/loader.js');
-    script.async = true;
+    script.setAttribute('data-widget-id', '67a1422f5217fddb3070bf21');
     document.body.appendChild(script);
+    
+    scriptLoaded.current = true;
     
     // Clean up function
     return () => {
+      if (document.body.contains(chatDiv)) {
+        document.body.removeChild(chatDiv);
+      }
       if (document.body.contains(script)) {
         document.body.removeChild(script);
       }
