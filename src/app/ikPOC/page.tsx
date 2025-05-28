@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../APP/InboundRoute.module.css';
+import styles from '../InboundRoute.module.css';
 
 interface SectionItem {
   text: string;
