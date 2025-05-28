@@ -1,0 +1,60 @@
+.inbound-route-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.inbound-route-container h1 {
+  font-size: 20px;
+  margin-top: 0;
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.inbound-route-container h2 {
+  font-size: 18px;
+  color: #34495e;
+  margin: 20px 0 10px 0;
+}
+
+.inbound-route-container h3 {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin: 15px 0 8px 0;
+}
+
+.divider {
+  border-top: 1px dashed #ddd;
+  margin: 15px 0;
+}
+
+.inbound-route-container ul {
+  padding-left: 20px;
+  margin: 8px 0;
+  list-style-type: none;
+}
+
+.inbound-route-container li {
+  margin-bottom: 5px;
+  padding: 2px 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.no-history {
+  text-align: center;
+  color: #95a5a6;
+  font-style: italic;
+  margin: 30px 0;
+}
