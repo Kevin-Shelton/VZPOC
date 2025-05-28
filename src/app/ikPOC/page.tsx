@@ -1,6 +1,6 @@
-// InboundRoute.tsx
+// iKPOC/page.tsx
 import React from 'react';
-import './InboundRoute.css';
+import '../APP/InboundRoute.css'; // Adjusted import path
 
 interface SectionItem {
   text: string;
