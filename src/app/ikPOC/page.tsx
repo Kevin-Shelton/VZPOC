@@ -1,6 +1,6 @@
-// iKPOC/page.tsx
+// src/app/ikPOC/page.tsx
 import React from 'react';
-import '../APP/InboundRoute.css'; // Adjusted import path
+import '../InboundRoute.css'; // Adjusted import path
 
 interface SectionItem {
   text: string;
@@ -13,7 +13,6 @@ interface RouteSection {
 }
 
 const InboundRoute: React.FC = () => {
-  // Define sections data with TypeScript types
   const sections: RouteSection[] = [
     {
       title: 'Name',
@@ -53,34 +52,7 @@ const InboundRoute: React.FC = () => {
 
   return (
     <div className="inbound-route-container">
-      <h1>Inbound Route</h1>
-      <ul>
-        <li>AID with ID</li>
-      </ul>
-      
-      <div className="divider"></div>
-      
-      <h2>XXXX XXXX XXXX</h2>
-      
-      {sections.map((section, index) => (
-        <React.Fragment key={index}>
-          <div className="section">
-            <h3>{section.title}</h3>
-            <ul>
-              {section.items.map((item, itemIndex) => (
-                <li key={itemIndex} className={item.isBold ? 'bold' : ''}>
-                  {item.text}
-                </li>
-              ))}
-            </ul>
-          </div>
-          {index < sections.length - 1 && <div className="divider"></div>}
-        </React.Fragment>
-      ))}
-      
-      <div className="divider"></div>
-      
-      <div className="no-history">NO HISTORY FOUND</div>
+      {/* ... rest of your component ... */}
     </div>
   );
 };
